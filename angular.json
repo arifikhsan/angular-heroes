@@ -57,6 +57,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
             }
           }
         },
@@ -68,6 +76,10 @@
           "configurations": {
             "production": {
               "browserTarget": "heroes:build:production"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "heroes:build:hmr"
             }
           }
         },
